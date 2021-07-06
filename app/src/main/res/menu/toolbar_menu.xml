@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="Add">
+    </item>
+
+    <item
+        android:id="@+id/share_app"
+        android:icon="@drawable/ic_share_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="Share">
+    </item>
+
+
+
+    <item
+        android:id="@+id/call_rates"
+        app:showAsAction="never"
+        android:title="Call rates">
+    </item>
+
+    <item
+        android:id="@+id/more_appps"
+        app:showAsAction="never"
+        android:title="More Apps">
+    </item>
+
+    <item
+        android:id="@+id/rate"
+        app:showAsAction="never"
+        android:title="Rate app">
+    </item>
+
+    <item
+        android:id="@+id/log_out"
+        app:showAsAction="never"
+        android:title="Log out">
+    </item>
+</menu>

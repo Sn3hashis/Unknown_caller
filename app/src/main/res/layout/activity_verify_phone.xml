@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:fitsSystemWindows="false"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:background="@drawable/gradient_green"
+        android:gravity="bottom"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/ToolBarTheme"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:id="@+id/toolbar">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.skydoves.elasticviews.ElasticImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    app:imageView_scale="0.7"
+                    app:imageView_duration="200"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Verification"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/img_code_verification" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/otp_has_been_sent_to_you_on_your_mobile_phone_please_enter_it_below"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et1"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/inputbox"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="@dimen/spacing_medium"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et2"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/inputbox"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="@dimen/spacing_medium"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et3"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/inputbox"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="@dimen/spacing_medium"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et4"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/inputbox"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="@dimen/spacing_medium"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/et5"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/inputbox"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="@dimen/spacing_medium"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et6"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/inputbox"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/verify"
+                style="@style/RbButton.Inverse.Green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="VERIFY"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resend"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/resend_sms"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

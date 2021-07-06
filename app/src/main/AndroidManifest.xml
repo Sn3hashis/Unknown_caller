@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mhvmedia.unknowncaller">
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:name="com.mhvmedia.unknowncaller.Application.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+        <activity android:name="com.mhvmedia.unknowncaller.Activities.ClaimRewardActivity"></activity>
+        <activity android:name=".ReferActivity"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.mhvmedia.unknowncaller.Activities.LoginActivity" />
+        <activity
+            android:name="com.mhvmedia.unknowncaller.Activities.CallRatesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mhvmedia.unknowncaller.Activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <service android:name="com.mhvmedia.unknowncaller.Service.CallService" />
+
+        <activity
+            android:name="com.mhvmedia.unknowncaller.Activities.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mhvmedia.unknowncaller.Activities.CallScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mhvmedia.unknowncaller.Activities.VerifyPhoneActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.mhvmedia.unknowncaller.Activities.ReferActivity" />
+
+        <service android:name="com.mhvmedia.unknowncaller.FCM.FirebaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

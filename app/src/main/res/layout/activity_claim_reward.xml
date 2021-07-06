@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="bottom"
+        android:background="@drawable/gradient_green"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="?attr/actionBarSize"
+            >
+
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:tint="@color/white"
+                android:padding="13sp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Redeem referral code"
+                android:textSize="20dp"
+                android:gravity="center|start"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:paddingEnd="?attr/actionBarSize"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/gift_image"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOT A REFERRAL CODE?"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/grey_60"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your invitation code to claim the"
+            android:textSize="15dp"
+            android:textColor="@color/grey_40"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="8sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/refer_claim_subtitle"
+            android:fontFamily="sans-serif-medium"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey_40"
+            android:layout_height="wrap_content"
+            android:text="referral reward of 100 points"
+            android:textSize="15dp"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/enter_refer_code"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/refer_background"
+            android:hint="Enter Referral Code"
+            android:gravity="center"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/redeem_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:text="REDEEM NOW"
+            android:background="@drawable/btn_gradient"/>
+
+        <TextView
+            android:id="@+id/refer_tos"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms of service"
+            android:layout_gravity="center"
+            android:layout_marginTop="5sp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gnt_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

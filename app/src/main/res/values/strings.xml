@@ -1,0 +1,343 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Unknown Caller</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admob_app_id">ca-app-pub-3625539989433572~9012974416</string>
+    <string name="admob_native" translatable="false">ca-app-pub-3625539989433572/7139174447</string>
+    <string name="admob_rewarded_video" translatable="false">ca-app-pub-3625539989433572/7727619382</string>
+
+    <string name="term">
+
+By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to The Lazy Dev.
+
+The Lazy Dev is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
+
+The Unknown Caller app stores and processes personal data that you have provided to us, in order to provide my Service. It’s your responsibility to keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs, compromise your phone’s security features and it could mean that the Unknown Caller app won’t work properly or at all.
+
+The app does use third party services that declare their own Terms and Conditions.
+
+Link to Terms and Conditions of third party service providers used by the app
+
+Google Play Services
+AdMob
+Google Analytics for Firebase
+Firebase Crashlytics
+One Signal
+You should be aware that there are certain things that The Lazy Dev will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but The Lazy Dev cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.
+
+If you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.
+
+Along the same lines, The Lazy Dev cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, The Lazy Dev cannot accept responsibility.
+
+With respect to The Lazy Dev’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. The Lazy Dev accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.
+
+At some point, we may wish to update the app. The app is currently available on Android – the requirements for system(and for any additional systems we decide to extend the availability of the app to) may change, and you’ll need to download the updates if you want to keep using the app. The Lazy Dev does not promise that it will always update the app so that it is relevant to you and/or works with the Android version that you have installed on your device. However, you promise to always accept updates to the application when offered to you, We may also wish to stop providing the app, and may terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must stop using the app, and (if needed) delete it from your device.
+
+Changes to This Terms and Conditions
+
+I may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Terms and Conditions on this page.
+
+These terms and conditions are effective as of 2021-07-05
+
+Contact Us
+
+If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at sn3hashis@gmail.com.
+    </string>
+    <string name="refer_description">Best app to call anywhere without revealing your real number\n\n</string>
+    <string name="wait">wait…</string>
+    <string name="title">Sample Activity #%d</string>
+    <string name="make_call">Make Call</string>
+    <string name="earn_credits">Earn Credits</string>
+    <string name="share_title">Hello, Best Anonymous Calling app that I found here:</string>
+    <string name="small_pack_sub_title">Starter pack 20 Rupees</string>
+    <string name="medium_pack_sub_title">Special offer 50 Rupees</string>
+    <string name="big_pack_sub_title">Save money 100 Rupees</string>
+    <string name="earn_free_credits">Earn Free Credits</string>
+    <string name="advertisement">Advertisement</string>
+    <string name="advertisement_sub_title">Watch short videos and earn credits</string>
+    <string name="buy_now">Buy now</string>
+    <string name="call">CALL</string>
+    <string name="call_charges">Call charges : 60 credits/min</string>
+
+    <!-- TODO Keyboard letters -->
+    <string name="abc">ABC</string>
+    <string name="def">DEF</string>
+    <string name="ghi">GHI</string>
+    <string name="jkl">JKL</string>
+    <string name="mno">MNO</string>
+    <string name="pqr">PQR</string>
+    <string name="stu">STU</string>
+    <string name="vwx">VWX</string>
+    <string name="yz">YZ</string>
+
+    <!-- TODO Country names -->
+    <string name="Afghanistan">Afghanistan</string>
+    <string name="AlandIslands">Aland Islands</string>
+    <string name="Albania">Albania</string>
+    <string name="Algeria">Algeria</string>
+    <string name="AmericanSamoa">American Samoa</string>
+    <string name="Andorra">Andorra</string>
+    <string name="Angola">Angola</string>
+    <string name="Anguilla">Anguilla</string>
+    <string name="Antarctica">Antarctica</string>
+    <string name="AntiguaandBarbuda">Antigua and Barbuda</string>
+    <string name="Argentina">Argentine Republic</string>
+    <string name="Armenia">Armenia</string>
+    <string name="Aruba">Aruba</string>
+    <string name="Australia">Australia</string>
+    <string name="Austria">Austria</string>
+    <string name="Azerbaijan">Azerbaijan</string>
+    <string name="Bahamas">Bahamas</string>
+    <string name="Bahrain">Bahrain</string>
+    <string name="Bangladesh">Bangladesh</string>
+    <string name="Barbados">Barbados</string>
+    <string name="Belarus">Belarus</string>
+    <string name="Belgium">Belgium</string>
+    <string name="Belize">Belize</string>
+    <string name="Benin">Benin</string>
+    <string name="Bermuda">Bermuda</string>
+    <string name="Bhutan">Bhutan</string>
+    <string name="Bolivia">Bolivia</string>
+    <string name="Bonaire">Bonaire</string>
+    <string name="BosniaandHerzegovina">Bosnia and Herzegovina</string>
+    <string name="Botswana">Botswana</string>
+    <string name="BouvetIsland">Bouvet Island</string>
+    <string name="Brazil">Brazil</string>
+    <string name="BritishIndianOceanTerritory">British Indian Ocean Territory</string>
+    <string name="Brunei">Brunei</string>
+    <string name="Bulgaria">Bulgaria</string>
+    <string name="BurkinaFaso">Burkina Faso</string>
+    <string name="Burundi">Burundi</string>
+    <string name="Cambodia">Cambodia</string>
+    <string name="Cameroon">Cameroon</string>
+    <string name="Canada">Canada</string>
+    <string name="CapeVerde">Cape Verde</string>
+    <string name="CaymanIslands">Cayman Islands</string>
+    <string name="CentralAfricanRepublic">Central African Republic</string>
+    <string name="Chad">Chad</string>
+    <string name="Chile">Chile</string>
+    <string name="China">China</string>
+    <string name="ChristmasIsland">Christmas Island</string>
+    <string name="CocosIslands">Cocos Islands</string>
+    <string name="Colombia">Colombia</string>
+    <string name="Comoros">Comoros</string>
+    <string name="CookIslands">Cook Islands</string>
+    <string name="CostaRica">Costa Rica</string>
+    <string name="CotedIvoire">Cote d Ivoire</string>
+    <string name="Croatia">Croatia</string>
+    <string name="Cuba">Cuba</string>
+    <string name="Curacao">Curacao</string>
+    <string name="Cyprus">Cyprus</string>
+    <string name="CzechRepublic">Czech Republic</string>
+    <string name="DemocraticRepublicoftheCongo">Democratic Republic of the Congo</string>
+    <string name="Denmark">Denmark</string>
+    <string name="Djibouti">Djibouti</string>
+    <string name="Dominica">Dominica</string>
+    <string name="DominicanRepublic">Dominican Republic</string>
+    <string name="EastTimor">East Timor</string>
+    <string name="Ecuador">Ecuador</string>
+    <string name="Egypt">Egypt</string>
+    <string name="ElSalvador">El Salvador</string>
+    <string name="England">England</string>
+    <string name="EquatorialGuinea">Equatorial Guinea</string>
+    <string name="Eritrea">Eritrea</string>
+    <string name="Estonia">Estonia</string>
+    <string name="Ethiopia">Ethiopia</string>
+    <string name="EuropeanUnion">European Union</string>
+    <string name="FalklandIslands">Falkland Islands</string>
+    <string name="FaroeIslands">Faroe Islands</string>
+    <string name="Fiji">Fiji</string>
+    <string name="Finland">Finland</string>
+    <string name="France">France</string>
+    <string name="FrenchGuiana">French Guiana</string>
+    <string name="FrenchPolynesia">French Polynesia</string>
+    <string name="TerritoryoftheFrenchSouthernandAntarcticLands">Territory of the French Southern and Antarctic Lands</string>
+    <string name="Gabon">Gabon</string>
+    <string name="Gambia">Gambia</string>
+    <string name="Georgia">Georgia</string>
+    <string name="Germany">Germany</string>
+    <string name="Ghana">Ghana</string>
+    <string name="Gibraltar">Gibraltar</string>
+    <string name="Greece">Greece</string>
+    <string name="Greenland">Greenland</string>
+    <string name="Grenada">Grenada</string>
+    <string name="Guadeloupe">Guadeloupe</string>
+    <string name="Guam">Guam</string>
+    <string name="Guatemala">Guatemala</string>
+    <string name="Guernsey">Guernsey</string>
+    <string name="Guinea">Guinea</string>
+    <string name="GuineaBissau">Guinea-Bissau</string>
+    <string name="Guyana">Guyana</string>
+    <string name="Haiti">Haiti</string>
+    <string name="HeardIsland">Heard Island</string>
+    <string name="Honduras">Honduras</string>
+    <string name="HongKong">Hong Kong</string>
+    <string name="Hungary">Hungary</string>
+    <string name="Iceland">Iceland</string>
+    <string name="India">India</string>
+    <string name="Indonesia">Indonesia</string>
+    <string name="Iran">Iran</string>
+    <string name="Iraq">Iraq</string>
+    <string name="Ireland">Ireland</string>
+    <string name="IsleofMan">Isle of Man</string>
+    <string name="Israel">Israel</string>
+    <string name="Italy">Italy</string>
+    <string name="Jamaica">Jamaica</string>
+    <string name="Japan">Japan</string>
+    <string name="Jersey">Jersey</string>
+    <string name="Jordan">Jordan</string>
+    <string name="Kazakhstan">Kazakhstan</string>
+    <string name="Kenya">Kenya</string>
+    <string name="Kiribati">Kiribati</string>
+    <string name="Kosovo">Kosovo</string>
+    <string name="Kuwait">Kuwait</string>
+    <string name="Kyrgyzstan">Kyrgyzstan</string>
+    <string name="Laos">Laos</string>
+    <string name="Latvia">Latvia</string>
+    <string name="Lebanon">Lebanon</string>
+    <string name="Lesotho">Lesotho</string>
+    <string name="Liberia">Liberia</string>
+    <string name="Libya">Libya</string>
+    <string name="Liechtenstein">Liechtenstein</string>
+    <string name="Lithuania">Lithuania</string>
+    <string name="Luxembourg">Luxembourg</string>
+    <string name="Macao">Macao</string>
+    <string name="Macedonia">Macedonia</string>
+    <string name="Madagascar">Madagascar</string>
+    <string name="Malawi">Malawi</string>
+    <string name="Malaysia">Malaysia</string>
+    <string name="Maldives">Maldives</string>
+    <string name="Mali">Mali</string>
+    <string name="Malta">Malta</string>
+    <string name="MarshallIslands">Marshall Islands</string>
+    <string name="Martinique">Martinique</string>
+    <string name="Mauritania">Mauritania</string>
+    <string name="Mauritius">Mauritius</string>
+    <string name="Mayotte">Mayotte</string>
+    <string name="Mexico">Mexico</string>
+    <string name="Micronesia">Micronesia</string>
+    <string name="Moldova">Moldova</string>
+    <string name="Monaco">Monaco</string>
+    <string name="Mongolia">Mongolia</string>
+    <string name="Montenegro">Montenegro</string>
+    <string name="Montserrat">Montserrat</string>
+    <string name="Morocco">Morocco</string>
+    <string name="Mozambique">Mozambique</string>
+    <string name="Myanmar">Myanmar</string>
+    <string name="Namibia">Namibia</string>
+    <string name="Nauru">Nauru</string>
+    <string name="Nepal">Nepal</string>
+    <string name="Netherlands">Netherlands</string>
+    <string name="NewCaledonia">New Caledonia</string>
+    <string name="NewZealand">New Zealand</string>
+    <string name="Nicaragua">Nicaragua</string>
+    <string name="Niger">Niger</string>
+    <string name="Nigeria">Nigeria</string>
+    <string name="Niue">Niue</string>
+    <string name="NorfolkIsland">Norfolk Island</string>
+    <string name="NorthKorea">North Korea</string>
+    <string name="NorthernMarianaIslands">Northern Mariana Islands</string>
+    <string name="Norway">Norway</string>
+    <string name="Oman">Oman</string>
+    <string name="Pakistan">Pakistan</string>
+    <string name="Palau">Palau</string>
+    <string name="Palestinianterritories">Palestinian territories</string>
+    <string name="Panama">Panama</string>
+    <string name="PapuaNewGuinea">Papua New Guinea</string>
+    <string name="Paraguay">Paraguay</string>
+    <string name="Peru">Peru</string>
+    <string name="Philippines">Philippines</string>
+    <string name="PitcairnIslands">Pitcairn Islands</string>
+    <string name="Poland">Poland</string>
+    <string name="Portugal">Portugal</string>
+    <string name="PuertoRico">Puerto Rico</string>
+    <string name="Qatar">Qatar</string>
+    <string name="Congo">Congo</string>
+    <string name="Reunion">Reunion</string>
+    <string name="Romania">Romania</string>
+    <string name="Russia">Russia</string>
+    <string name="Rwanda">Rwanda</string>
+    <string name="SaintBarthelemy">Saint Barthelemy</string>
+    <string name="SaintHelena">Saint Helena</string>
+    <string name="SaintKittsandNevis">Saint Kitts and Nevis</string>
+    <string name="SaintLucia">Saint Lucia</string>
+    <string name="SaintMartin">Saint Martin</string>
+    <string name="SaintPierreandMiquelon">Saint Pierre and Miquelon</string>
+    <string name="SaintVincentandtheGrenadines">Saint Vincent and the Grenadines</string>
+    <string name="Samoa">Samoa</string>
+    <string name="SanMarino">San Marino</string>
+    <string name="SaoTomeandPrincipe">Sao Tome and Principe</string>
+    <string name="SaudiArabia">Saudi Arabia</string>
+    <string name="Scotland">Scotland</string>
+    <string name="Senegal">Senegal</string>
+    <string name="Serbia">Serbia</string>
+    <string name="Seychelles">Seychelles</string>
+    <string name="SierraLeone">Sierra Leone</string>
+    <string name="Singapore">Singapore</string>
+    <string name="SintMaarten">Sint Maarten</string>
+    <string name="Slovakia">Slovakia</string>
+    <string name="Slovenia">Slovenia</string>
+    <string name="SolomonIslands">Solomon Islands</string>
+    <string name="Somalia">Somalia</string>
+    <string name="SouthAfrica">South Africa</string>
+    <string name="SouthGeorgiaandtheSouthSandwichIslands">South Georgia and the South Sandwich Islands</string>
+    <string name="SouthKorea">South Korea</string>
+    <string name="SouthSudan">South Sudan</string>
+    <string name="SovietUnion">Soviet Union</string>
+    <string name="Spain">Spain</string>
+    <string name="SriLanka">Sri Lanka</string>
+    <string name="Sudan">Sudan</string>
+    <string name="Suriname">Suriname</string>
+    <string name="SvalbardandJanMayen">Svalbard and Jan Mayen</string>
+    <string name="Swaziland">Swaziland</string>
+    <string name="Sweden">Sweden</string>
+    <string name="Switzerland">Switzerland</string>
+    <string name="Syria">Syria</string>
+    <string name="Taiwan">Taiwan</string>
+    <string name="Tajikistan">Tajikistan</string>
+    <string name="Tanzania">Tanzania</string>
+    <string name="Thailand">Thailand</string>
+    <string name="Togo">Togo</string>
+    <string name="Tokelau">Tokelau</string>
+    <string name="Tonga">Tonga</string>
+    <string name="TrinidadandTobago">Trinidad and Tobago</string>
+    <string name="Tunisia">Tunisia</string>
+    <string name="Turkey">Turkey</string>
+    <string name="Turkmenistan">Turkmenistan</string>
+    <string name="TurksandCaicosIslands">Turks and Caicos Islands</string>
+    <string name="Tuvalu">Tuvalu</string>
+    <string name="Uganda">Uganda</string>
+    <string name="Ukraine">Ukraine</string>
+    <string name="UnitedArabEmirates">United Arab Emirates</string>
+    <string name="UnitedKingdom">United Kingdom</string>
+    <string name="UnitedStatesofAmerica">United States of America</string>
+    <string name="Uruguay">Uruguay</string>
+    <string name="Uzbekistan">Uzbekistan</string>
+    <string name="Vanuatu">Vanuatu</string>
+    <string name="VaticanCity">Vatican City</string>
+    <string name="Venezuela">Venezuela</string>
+    <string name="Vietnam">Vietnam</string>
+    <string name="VirginIslands">Virgin Islands</string>
+    <string name="VirginIslandsoftheUnitedStates">Virgin Islands of the United States</string>
+    <string name="Wales">Wales</string>
+    <string name="WallisandFutuna">Wallis and Futuna</string>
+    <string name="WesternSahara">Western Sahara</string>
+    <string name="Yemen">Yemen</string>
+    <string name="Zambia">Zambia</string>
+    <string name="Zimbabwe">Zimbabwe</string>
+    <string name="reward_taken">Reward claimed already</string>
+    <string name="reward_taken_msg">Sorry you have already claimed your reward but you still can earn points by inviting someone</string>
+    <string name="understand">I understand</string>
+    <string name="enter_refer_code">Please enter refer code</string>
+    <string name="invalid_referral_code">Invalid referral code</string>
+    <string name="own_referral_code">It\'s your own referral code</string>
+    <string name="something_problem">There\'s something problem</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="got_it">Got it</string>
+    <string name="earn_upto">\"Earn Upto \"</string>
+    <string name="no_other_time">NO, OTHER TIME</string>
+    <string name="otp_has_been_sent_to_you_on_your_mobile_phone_please_enter_it_below">OTP has been sent to you on your mobile phone. Please enter it below</string>
+    <string name="resend_sms">Resend sms</string>
+    <string name="valid_from">last update July 2021</string>
+</resources>

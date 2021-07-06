@@ -1,0 +1,331 @@
+package com.mhvmedia.unknowncaller.Activities;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.skydoves.elasticviews.ElasticImageView;
+import com.mhvmedia.unknowncaller.Adapters.CallRatesAdapter;
+import com.mhvmedia.unknowncaller.Model.ModelCallRates;
+import com.mhvmedia.unknowncaller.R;
+import com.mhvmedia.unknowncaller.Variables.CallRates;
+
+import java.util.ArrayList;
+import java.util.List;
+/** Created by AwsmCreators * */
+
+public class CallRatesActivity extends AppCompatActivity implements View.OnClickListener {
+    RecyclerView recyclerView;
+    ProgressBar progressBar;
+    List<ModelCallRates> countrylist;
+    RecyclerView.Adapter adapter;
+    String costpermin = " "+"Credits/min";
+    ElasticImageView back;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_call_rates);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= 21) { getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN); }
+
+        changeStatusBarColor();
+        back = findViewById(R.id.back);
+        back.setOnClickListener(this);
+        recyclerView = findViewById(R.id.callrates);
+        progressBar = findViewById(R.id.progressbar);
+        countrylist = new ArrayList<>();
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Afghanistan),Integer.toString(CallRates.Afghanistan)+costpermin,R.drawable.afghanistan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.AlandIslands),Integer.toString(CallRates.AlandIslands)+costpermin,R.drawable.aland_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Albania),Integer.toString(CallRates.Albania)+costpermin,R.drawable.albania));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Algeria),Integer.toString(CallRates.Algeria)+costpermin,R.drawable.algeria));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.AmericanSamoa),Integer.toString(CallRates.AmericanSamoa)+costpermin,R.drawable.american_samoa));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Andorra),Integer.toString(CallRates.Andorra)+costpermin,R.drawable.andorra));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Angola),Integer.toString(CallRates.Angola)+costpermin,R.drawable.angola));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Anguilla),Integer.toString(CallRates.Anguilla)+costpermin,R.drawable.anguilla));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Antarctica),Integer.toString(CallRates.Antarctica)+costpermin,R.drawable.antarctica));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.AntiguaandBarbuda),Integer.toString(CallRates.AntiguaandBarbuda)+costpermin,R.drawable.antigua_and_barbuda));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Argentina),Integer.toString(CallRates.Argentina)+costpermin,R.drawable.argentina));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Armenia),Integer.toString(CallRates.Armenia)+costpermin,R.drawable.armenia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Aruba),Integer.toString(CallRates.Aruba)+costpermin,R.drawable.aruba));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Australia),Integer.toString(CallRates.Australia)+costpermin,R.drawable.australia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Austria),Integer.toString(CallRates.Austria)+costpermin,R.drawable.austria));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Azerbaijan),Integer.toString(CallRates.Azerbaijan)+costpermin,R.drawable.azerbaijan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bahamas),Integer.toString(CallRates.Bahamas)+costpermin,R.drawable.bahamas));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bahrain),Integer.toString(CallRates.Bahrain)+costpermin,R.drawable.bahrain));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bangladesh),Integer.toString(CallRates.Bangladesh)+costpermin,R.drawable.bangladesh));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Barbados),Integer.toString(CallRates.Barbados)+costpermin,R.drawable.barbados));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Belarus),Integer.toString(CallRates.Belarus)+costpermin,R.drawable.belarus));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Belgium),Integer.toString(CallRates.Belgium)+costpermin,R.drawable.belgium));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Belize),Integer.toString(CallRates.Belize)+costpermin,R.drawable.belize));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Benin),Integer.toString(CallRates.Benin)+costpermin,R.drawable.benin));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bermuda),Integer.toString(CallRates.Bermuda)+costpermin,R.drawable.bermuda));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bhutan),Integer.toString(CallRates.Bhutan)+costpermin,R.drawable.bhutan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bolivia),Integer.toString(CallRates.Bolivia)+costpermin,R.drawable.bolivia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bonaire),Integer.toString(CallRates.Bonaire)+costpermin,R.drawable.bonaire));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.BosniaandHerzegovina),Integer.toString(CallRates.BosniaandHerzegovina)+costpermin,R.drawable.bosnia_and_herzegovina));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Botswana),Integer.toString(CallRates.Botswana)+costpermin,R.drawable.botswana));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.BouvetIsland),Integer.toString(CallRates.BouvetIsland)+costpermin,R.drawable.bouvet_island));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Brazil),Integer.toString(CallRates.Brazil)+costpermin,R.drawable.brazil));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.BritishIndianOceanTerritory),Integer.toString(CallRates.BritishIndianOceanTerritory)+costpermin,R.drawable.british_indian_ocean_territory));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Brunei),Integer.toString(CallRates.Brunei)+costpermin,R.drawable.brunei));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Bulgaria),Integer.toString(CallRates.Bulgaria)+costpermin,R.drawable.bulgaria));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.BurkinaFaso),Integer.toString(CallRates.BurkinaFaso)+costpermin,R.drawable.burkina_faso));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Burundi),Integer.toString(CallRates.Burundi)+costpermin,R.drawable.burundi));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Cambodia),Integer.toString(CallRates.Cambodia)+costpermin,R.drawable.cambodia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Cameroon),Integer.toString(CallRates.Cameroon)+costpermin,R.drawable.cameroon));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Canada),Integer.toString(CallRates.Canada)+costpermin,R.drawable.canada));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CapeVerde),Integer.toString(CallRates.CapeVerde)+costpermin,R.drawable.cape_verde));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CaymanIslands),Integer.toString(CallRates.CaymanIslands)+costpermin,R.drawable.cayman_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CentralAfricanRepublic),Integer.toString(CallRates.CentralAfricanRepublic)+costpermin,R.drawable.central_african_republic));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Chad),Integer.toString(CallRates.Chad)+costpermin,R.drawable.chad));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Chile),Integer.toString(CallRates.Chile)+costpermin,R.drawable.chile));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.China),Integer.toString(CallRates.China)+costpermin,R.drawable.china));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.ChristmasIsland),Integer.toString(CallRates.ChristmasIsland)+costpermin,R.drawable.christmas_island));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CocosIslands),Integer.toString(CallRates.CocosIslands)+costpermin,R.drawable.cocos_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Colombia),Integer.toString(CallRates.Colombia)+costpermin,R.drawable.colombia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Comoros),Integer.toString(CallRates.Comoros)+costpermin,R.drawable.comoros));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CookIslands),Integer.toString(CallRates.CookIslands)+costpermin,R.drawable.cook_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CostaRica),Integer.toString(CallRates.CostaRica)+costpermin,R.drawable.costa_rica));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CotedIvoire),Integer.toString(CallRates.CotedIvoire)+costpermin,R.drawable.cote));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Croatia),Integer.toString(CallRates.Croatia)+costpermin,R.drawable.croatia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Cuba),Integer.toString(CallRates.Cuba)+costpermin,R.drawable.cuba));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Curacao),Integer.toString(CallRates.Curacao)+costpermin,R.drawable.curacao));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Cyprus),Integer.toString(CallRates.Cyprus)+costpermin,R.drawable.cyprus));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.CzechRepublic),Integer.toString(CallRates.CzechRepublic)+costpermin,R.drawable.czech_republic));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.DemocraticRepublicoftheCongo),Integer.toString(CallRates.DemocraticRepublicoftheCongo)+costpermin,R.drawable.democratic_republic_of_the_congo));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Denmark),Integer.toString(CallRates.Denmark)+costpermin,R.drawable.denmark));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Djibouti),Integer.toString(CallRates.Djibouti)+costpermin,R.drawable.djibouti));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Dominica),Integer.toString(CallRates.Dominica)+costpermin,R.drawable.dominica));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.DominicanRepublic),Integer.toString(CallRates.DominicanRepublic)+costpermin,R.drawable.dominican_republic));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.EastTimor),Integer.toString(CallRates.EastTimor)+costpermin,R.drawable.east_timor));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Ecuador),Integer.toString(CallRates.Ecuador)+costpermin,R.drawable.ecuador));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Egypt),Integer.toString(CallRates.Egypt)+costpermin,R.drawable.egypt));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.ElSalvador),Integer.toString(CallRates.ElSalvador)+costpermin,R.drawable.el_salvador));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.England),Integer.toString(CallRates.England)+costpermin,R.drawable.england));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.EquatorialGuinea),Integer.toString(CallRates.EquatorialGuinea)+costpermin,R.drawable.equatorial_guinea));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Eritrea),Integer.toString(CallRates.Eritrea)+costpermin,R.drawable.eritrea));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Estonia),Integer.toString(CallRates.Estonia)+costpermin,R.drawable.estonia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Ethiopia),Integer.toString(CallRates.Ethiopia)+costpermin,R.drawable.ethiopia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.EuropeanUnion),Integer.toString(CallRates.EuropeanUnion)+costpermin,R.drawable.european_union));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.FalklandIslands),Integer.toString(CallRates.FalklandIslands)+costpermin,R.drawable.falkland_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.FaroeIslands),Integer.toString(CallRates.FaroeIslands)+costpermin,R.drawable.faroe_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Fiji),Integer.toString(CallRates.Fiji)+costpermin,R.drawable.fiji));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Finland),Integer.toString(CallRates.Finland)+costpermin,R.drawable.finland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.France),Integer.toString(CallRates.France)+costpermin,R.drawable.france));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.FrenchGuiana),Integer.toString(CallRates.FrenchGuiana)+costpermin,R.drawable.french_guiana));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.FrenchPolynesia),Integer.toString(CallRates.FrenchPolynesia)+costpermin,R.drawable.french_polynesia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.TerritoryoftheFrenchSouthernandAntarcticLands),Integer.toString(CallRates.TerritoryoftheFrenchSouthernandAntarcticLands)+costpermin,R.drawable.french_southern_territories));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Gabon),Integer.toString(CallRates.Gabon)+costpermin,R.drawable.gabon));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Gambia),Integer.toString(CallRates.Gambia)+costpermin,R.drawable.gambia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Georgia),Integer.toString(CallRates.Georgia)+costpermin,R.drawable.georgia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Germany),Integer.toString(CallRates.Germany)+costpermin,R.drawable.germany));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Ghana),Integer.toString(CallRates.Ghana)+costpermin,R.drawable.ghana));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Gibraltar),Integer.toString(CallRates.Gibraltar)+costpermin,R.drawable.gibraltar));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Greece),Integer.toString(CallRates.Greece)+costpermin,R.drawable.greece));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Greenland),Integer.toString(CallRates.Greenland)+costpermin,R.drawable.greenland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Grenada),Integer.toString(CallRates.Grenada)+costpermin,R.drawable.grenada));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guadeloupe),Integer.toString(CallRates.Guadeloupe)+costpermin,R.drawable.guadeloupe));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guam),Integer.toString(CallRates.Guam)+costpermin,R.drawable.guam));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guatemala),Integer.toString(CallRates.Guatemala)+costpermin,R.drawable.guatemala));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guernsey),Integer.toString(CallRates.Guernsey)+costpermin,R.drawable.guernsey));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guinea),Integer.toString(CallRates.Guinea)+costpermin,R.drawable.guinea));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.GuineaBissau),Integer.toString(CallRates.GuineaBissau)+costpermin,R.drawable.guinea_bissau));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Guyana),Integer.toString(CallRates.Guyana)+costpermin,R.drawable.guyana));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Haiti),Integer.toString(CallRates.Haiti)+costpermin,R.drawable.haiti));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.HeardIsland),Integer.toString(CallRates.HeardIsland)+costpermin,R.drawable.heard_island_and_mcdonald_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Honduras),Integer.toString(CallRates.Honduras)+costpermin,R.drawable.honduras));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.HongKong),Integer.toString(CallRates.HongKong)+costpermin,R.drawable.hong_kong));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Hungary),Integer.toString(CallRates.Hungary)+costpermin,R.drawable.hungary));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Iceland),Integer.toString(CallRates.Iceland)+costpermin,R.drawable.iceland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.India),Integer.toString(CallRates.India)+costpermin,R.drawable.india));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Indonesia),Integer.toString(CallRates.Indonesia)+costpermin,R.drawable.indonesia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Iran),Integer.toString(CallRates.Iran)+costpermin,R.drawable.iran));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Iraq),Integer.toString(CallRates.Iraq)+costpermin,R.drawable.iraq));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Ireland),Integer.toString(CallRates.Ireland)+costpermin,R.drawable.ireland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.IsleofMan),Integer.toString(CallRates.IsleofMan)+costpermin,R.drawable.isle_of_man));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Israel),Integer.toString(CallRates.Israel)+costpermin,R.drawable.israel));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Italy),Integer.toString(CallRates.Italy)+costpermin,R.drawable.italy));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Jamaica),Integer.toString(CallRates.Jamaica)+costpermin,R.drawable.jamaica));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Japan),Integer.toString(CallRates.Japan)+costpermin,R.drawable.japan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Jersey),Integer.toString(CallRates.Jersey)+costpermin,R.drawable.jersey));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Jordan),Integer.toString(CallRates.Jordan)+costpermin,R.drawable.jordan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kazakhstan),Integer.toString(CallRates.Kazakhstan)+costpermin,R.drawable.kazakhstan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kenya),Integer.toString(CallRates.Kenya)+costpermin,R.drawable.kenya));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kiribati),Integer.toString(CallRates.Kiribati)+costpermin,R.drawable.kiribati));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kosovo),Integer.toString(CallRates.Kosovo)+costpermin,R.drawable.kosovo));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kuwait),Integer.toString(CallRates.Kuwait)+costpermin,R.drawable.kuwait));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Kyrgyzstan),Integer.toString(CallRates.Kyrgyzstan)+costpermin,R.drawable.kyrgyzstan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Laos),Integer.toString(CallRates.Laos)+costpermin,R.drawable.laos));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Latvia),Integer.toString(CallRates.Latvia)+costpermin,R.drawable.latvia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Lebanon),Integer.toString(CallRates.Lebanon)+costpermin,R.drawable.lebanon));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Lesotho),Integer.toString(CallRates.Lesotho)+costpermin,R.drawable.lesotho));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Liberia),Integer.toString(CallRates.Liberia)+costpermin,R.drawable.liberia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Libya),Integer.toString(CallRates.Libya)+costpermin,R.drawable.libya));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Liechtenstein),Integer.toString(CallRates.Liechtenstein)+costpermin,R.drawable.liechtenstein));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Lithuania),Integer.toString(CallRates.Lithuania)+costpermin,R.drawable.lithuania));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Luxembourg),Integer.toString(CallRates.Luxembourg)+costpermin,R.drawable.luxembourg));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Macao),Integer.toString(CallRates.Macao)+costpermin,R.drawable.macao));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Macedonia),Integer.toString(CallRates.Macedonia)+costpermin,R.drawable.macedonia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Madagascar),Integer.toString(CallRates.Madagascar)+costpermin,R.drawable.madagascar));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Malawi),Integer.toString(CallRates.Malawi)+costpermin,R.drawable.malawi));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Malaysia),Integer.toString(CallRates.Malaysia)+costpermin,R.drawable.malaysia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Maldives),Integer.toString(CallRates.Maldives)+costpermin,R.drawable.maldives));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mali),Integer.toString(CallRates.Mali)+costpermin,R.drawable.mali));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Malta),Integer.toString(CallRates.Malta)+costpermin,R.drawable.malta));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.MarshallIslands),Integer.toString(CallRates.MarshallIslands)+costpermin,R.drawable.marshall_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Martinique),Integer.toString(CallRates.Martinique)+costpermin,R.drawable.martinique));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mauritania),Integer.toString(CallRates.Mauritania)+costpermin,R.drawable.mauritania));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mauritius),Integer.toString(CallRates.Mauritius)+costpermin,R.drawable.mauritius));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mayotte),Integer.toString(CallRates.Mayotte)+costpermin,R.drawable.mayotte));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mexico),Integer.toString(CallRates.Mexico)+costpermin,R.drawable.mexico));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Micronesia),Integer.toString(CallRates.Micronesia)+costpermin,R.drawable.micronesia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Moldova),Integer.toString(CallRates.Moldova)+costpermin,R.drawable.moldova));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Monaco),Integer.toString(CallRates.Monaco)+costpermin,R.drawable.monaco));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mongolia),Integer.toString(CallRates.Mongolia)+costpermin,R.drawable.mongolia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Montenegro),Integer.toString(CallRates.Montenegro)+costpermin,R.drawable.montenegro));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Montserrat),Integer.toString(CallRates.Montserrat)+costpermin,R.drawable.montserrat));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Morocco),Integer.toString(CallRates.Morocco)+costpermin,R.drawable.morocco));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Mozambique),Integer.toString(CallRates.Mozambique)+costpermin,R.drawable.mozambique));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Myanmar),Integer.toString(CallRates.Myanmar)+costpermin,R.drawable.myanmar));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Namibia),Integer.toString(CallRates.Namibia)+costpermin,R.drawable.namibia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Nauru),Integer.toString(CallRates.Nauru)+costpermin,R.drawable.nauru));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Nepal),Integer.toString(CallRates.Nepal)+costpermin,R.drawable.nepal));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Netherlands),Integer.toString(CallRates.Netherlands)+costpermin,R.drawable.netherlands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.NewCaledonia),Integer.toString(CallRates.NewCaledonia)+costpermin,R.drawable.new_caledonia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.NewZealand),Integer.toString(CallRates.NewZealand)+costpermin,R.drawable.new_zealand));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Nicaragua),Integer.toString(CallRates.Nicaragua)+costpermin,R.drawable.nicaragua));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Niger),Integer.toString(CallRates.Niger)+costpermin,R.drawable.niger));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Nigeria),Integer.toString(CallRates.Nigeria)+costpermin,R.drawable.nigeria));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Niue),Integer.toString(CallRates.Niue)+costpermin,R.drawable.niue));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.NorfolkIsland),Integer.toString(CallRates.NorfolkIsland)+costpermin,R.drawable.norfolk_island));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.NorthKorea),Integer.toString(CallRates.NorthKorea)+costpermin,R.drawable.korea_north));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.NorthernMarianaIslands),Integer.toString(CallRates.NorthernMarianaIslands)+costpermin,R.drawable.northern_mariana_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Norway),Integer.toString(CallRates.Norway)+costpermin,R.drawable.norway));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Oman),Integer.toString(CallRates.Oman)+costpermin,R.drawable.oman));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Pakistan),Integer.toString(CallRates.Pakistan)+costpermin,R.drawable.pakistan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Palau),Integer.toString(CallRates.Palau)+costpermin,R.drawable.palau));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Palestinianterritories),Integer.toString(CallRates.Palestinianterritories)+costpermin,R.drawable.palestinian_territory));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Panama),Integer.toString(CallRates.Panama)+costpermin,R.drawable.panama));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.PapuaNewGuinea),Integer.toString(CallRates.PapuaNewGuinea)+costpermin,R.drawable.papua_new_guinea));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Paraguay),Integer.toString(CallRates.Paraguay)+costpermin,R.drawable.paraguay));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Peru),Integer.toString(CallRates.Peru)+costpermin,R.drawable.peru));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Philippines),Integer.toString(CallRates.Philippines)+costpermin,R.drawable.philippines));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.PitcairnIslands),Integer.toString(CallRates.PitcairnIslands)+costpermin,R.drawable.pitcairn_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Poland),Integer.toString(CallRates.Poland)+costpermin,R.drawable.poland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Portugal),Integer.toString(CallRates.Portugal)+costpermin,R.drawable.portugal));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.PuertoRico),Integer.toString(CallRates.PuertoRico)+costpermin,R.drawable.puerto_rico));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Qatar),Integer.toString(CallRates.Qatar)+costpermin,R.drawable.qatar));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Congo),Integer.toString(CallRates.Congo)+costpermin,R.drawable.republic_of_the_congo));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Reunion),Integer.toString(CallRates.Reunion)+costpermin,R.drawable.reunion));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Romania),Integer.toString(CallRates.Romania)+costpermin,R.drawable.romania));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Russia),Integer.toString(CallRates.Russia)+costpermin,R.drawable.russia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Rwanda),Integer.toString(CallRates.Rwanda)+costpermin,R.drawable.rwanda));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintBarthelemy),Integer.toString(CallRates.SaintBarthelemy)+costpermin,R.drawable.saint_barthelemy));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintHelena),Integer.toString(CallRates.SaintHelena)+costpermin,R.drawable.saint_helena));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintKittsandNevis),Integer.toString(CallRates.SaintKittsandNevis)+costpermin,R.drawable.saint_kitts_and_nevis));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintLucia),Integer.toString(CallRates.SaintLucia)+costpermin,R.drawable.saint_lucia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintMartin),Integer.toString(CallRates.SaintMartin)+costpermin,R.drawable.saint_martin));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintPierreandMiquelon),Integer.toString(CallRates.SaintPierreandMiquelon)+costpermin,R.drawable.saint_pierre_and_miquelon));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaintVincentandtheGrenadines),Integer.toString(CallRates.SaintVincentandtheGrenadines)+costpermin,R.drawable.saint_vincent_and_the_grenadines));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Samoa),Integer.toString(CallRates.Samoa)+costpermin,R.drawable.samoa));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SanMarino),Integer.toString(CallRates.SanMarino)+costpermin,R.drawable.san_marino));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaoTomeandPrincipe),Integer.toString(CallRates.SaoTomeandPrincipe)+costpermin,R.drawable.sao_tome_and_principe));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SaudiArabia),Integer.toString(CallRates.SaudiArabia)+costpermin,R.drawable.saudi_arabia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Scotland),Integer.toString(CallRates.Scotland)+costpermin,R.drawable.scotland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Senegal),Integer.toString(CallRates.Senegal)+costpermin,R.drawable.senegal));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Serbia),Integer.toString(CallRates.Serbia)+costpermin,R.drawable.serbia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Seychelles),Integer.toString(CallRates.Seychelles)+costpermin,R.drawable.seychelles));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SierraLeone),Integer.toString(CallRates.SierraLeone)+costpermin,R.drawable.sierra_leone));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Singapore),Integer.toString(CallRates.Singapore)+costpermin,R.drawable.singapore));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SintMaarten),Integer.toString(CallRates.SintMaarten)+costpermin,R.drawable.sint_maarten));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Slovakia),Integer.toString(CallRates.Slovakia)+costpermin,R.drawable.slovakia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Slovenia),Integer.toString(CallRates.Slovenia)+costpermin,R.drawable.slovenia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SolomonIslands),Integer.toString(CallRates.SolomonIslands)+costpermin,R.drawable.solomon_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Somalia),Integer.toString(CallRates.Somalia)+costpermin,R.drawable.somalia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SouthAfrica),Integer.toString(CallRates.SouthAfrica)+costpermin,R.drawable.south_africa));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SouthGeorgiaandtheSouthSandwichIslands),Integer.toString(CallRates.SouthGeorgiaandtheSouthSandwichIslands)+costpermin,R.drawable.south_georgia_and_the_south_sandwich_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SouthKorea),Integer.toString(CallRates.SouthKorea)+costpermin,R.drawable.korea_south));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SouthSudan),Integer.toString(CallRates.SouthSudan)+costpermin,R.drawable.south_sudan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SovietUnion),Integer.toString(CallRates.SovietUnion)+costpermin,R.drawable.soviet_union));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Spain),Integer.toString(CallRates.Spain)+costpermin,R.drawable.spain));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SriLanka),Integer.toString(CallRates.SriLanka)+costpermin,R.drawable.sri_lanka));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Sudan),Integer.toString(CallRates.Sudan)+costpermin,R.drawable.sudan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Suriname),Integer.toString(CallRates.Suriname)+costpermin,R.drawable.suriname));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.SvalbardandJanMayen),Integer.toString(CallRates.SvalbardandJanMayen)+costpermin,R.drawable.svalbard_and_jan_mayen));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Swaziland),Integer.toString(CallRates.Swaziland)+costpermin,R.drawable.swaziland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Sweden),Integer.toString(CallRates.Sweden)+costpermin,R.drawable.sweden));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Switzerland),Integer.toString(CallRates.Switzerland)+costpermin,R.drawable.switzerland));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Syria),Integer.toString(CallRates.Syria)+costpermin,R.drawable.syria));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Taiwan),Integer.toString(CallRates.Taiwan)+costpermin,R.drawable.taiwan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tajikistan),Integer.toString(CallRates.Tajikistan)+costpermin,R.drawable.tajikistan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tanzania),Integer.toString(CallRates.Tanzania)+costpermin,R.drawable.tanzania));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Thailand),Integer.toString(CallRates.Thailand)+costpermin,R.drawable.thailand));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Togo),Integer.toString(CallRates.Togo)+costpermin,R.drawable.togo));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tokelau),Integer.toString(CallRates.Tokelau)+costpermin,R.drawable.tokelau));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tonga),Integer.toString(CallRates.Tonga)+costpermin,R.drawable.tonga));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.TrinidadandTobago),Integer.toString(CallRates.TrinidadandTobago)+costpermin,R.drawable.trinidad_and_tobago));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tunisia),Integer.toString(CallRates.Tunisia)+costpermin,R.drawable.tunisia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Turkey),Integer.toString(CallRates.Turkey)+costpermin,R.drawable.turkey));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Turkmenistan),Integer.toString(CallRates.Turkmenistan)+costpermin,R.drawable.turkmenistan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.TurksandCaicosIslands),Integer.toString(CallRates.TurksandCaicosIslands)+costpermin,R.drawable.turks_and_caicos_islands));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Tuvalu),Integer.toString(CallRates.Tuvalu)+costpermin,R.drawable.tuvalu));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Uganda),Integer.toString(CallRates.Uganda)+costpermin,R.drawable.uganda));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Ukraine),Integer.toString(CallRates.Ukraine)+costpermin,R.drawable.ukraine));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.UnitedArabEmirates),Integer.toString(CallRates.UnitedArabEmirates)+costpermin,R.drawable.united_arab_emirates));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.UnitedKingdom),Integer.toString(CallRates.UnitedKingdom)+costpermin,R.drawable.united_kingdom));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.UnitedStatesofAmerica),Integer.toString(CallRates.UnitedStatesofAmerica)+costpermin,R.drawable.united_states_of_america));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Uruguay),Integer.toString(CallRates.Uruguay)+costpermin,R.drawable.uruguay));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Uzbekistan),Integer.toString(CallRates.Uzbekistan)+costpermin,R.drawable.uzbekistan));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Vanuatu),Integer.toString(CallRates.Vanuatu)+costpermin,R.drawable.vanuatu));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.VaticanCity),Integer.toString(CallRates.VaticanCity)+costpermin,R.drawable.vatican_city));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Venezuela),Integer.toString(CallRates.Venezuela)+costpermin,R.drawable.venezuela));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Vietnam),Integer.toString(CallRates.Vietnam)+costpermin,R.drawable.vietnam));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.VirginIslands),Integer.toString(CallRates.VirginIslands)+costpermin,R.drawable.virgin_islands_british));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.VirginIslandsoftheUnitedStates),Integer.toString(CallRates.VirginIslandsoftheUnitedStates)+costpermin,R.drawable.virgin_islands_us));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Wales),Integer.toString(CallRates.Wales)+costpermin,R.drawable.wales));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.WallisandFutuna),Integer.toString(CallRates.WallisandFutuna)+costpermin,R.drawable.wallis_and_futuna));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.WesternSahara),Integer.toString(CallRates.WesternSahara)+costpermin,R.drawable.western_sahara));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Yemen),Integer.toString(CallRates.Yemen)+costpermin,R.drawable.yemen));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Zambia),Integer.toString(CallRates.Zambia)+costpermin,R.drawable.zambia));
+        countrylist.add(new ModelCallRates(getResources().getString(R.string.Zimbabwe),Integer.toString(CallRates.Zimbabwe)+costpermin,R.drawable.zimbabwe));
+
+
+        recyclerView.setAdapter(new CallRatesAdapter(countrylist, this, new CallRatesAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(ModelCallRates model) {
+                Toast.makeText(CallRatesActivity.this, ""+model.getCountryname(), Toast.LENGTH_SHORT).show();
+            }
+        }));
+    }
+
+    private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.back){
+            finish();
+        }
+    }
+}
